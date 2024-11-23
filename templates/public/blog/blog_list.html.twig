@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello BlogController!{% endblock %}
+
+{% block body %}
+    <h1 class="font-semibold">{{ "blog_title"|trans }}</h1>
+    {% for post in posts %}
+        <a  href="{{ path('app_blog_post', {'slug': post.slug }) }}">{{ post.title }}</a>
+        <br>
+    {% endfor %}
+{% endblock %}

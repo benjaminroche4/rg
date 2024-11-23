@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <h1 class="font-semibold">{{ "category_title"|trans }}</h1>
+    {% for category in categories %}
+        <p>{{ category.name }}</p>
+    {% endfor %}
+{% endblock %}

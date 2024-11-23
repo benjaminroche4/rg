@@ -1,5 +1,13 @@
 controllers:
+    prefix: "{_locale}"
+    requirements:
+        _locale: en|fr
     resource:
         path: ../src/Controller/
         namespace: App\Controller
     type: attribute
+homepage:
+    path: /
+    controller: App\Controller\Public\HomeController::index
+    defaults:
+        _locale: fr

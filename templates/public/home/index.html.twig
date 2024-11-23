@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    <h1 class="font-semibold">{{ "homepage_welcome"|trans({name: 'John'}) }}</h1>
+    <ul class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdown-language">
+        <li><a class="dropdown-item" href="{{ path('app_home', {_locale: 'en'}) }}">English</a></li>
+        <li><a class="dropdown-item" href="{{ path('app_home', {_locale: 'fr'}) }}">Français</a></li>
+    </ul>
+{% endblock %}

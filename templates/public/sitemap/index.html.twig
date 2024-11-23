@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+    Sitemap
+    <p>Page</p>
+    <a></a>
+    <p>Blog</p>
+    {% for post in blogPosts %}
+        {{ post.title }}{{ post.publishedAt | date('d F Y') | format_date(locale=app.request.locale) }} </br>
+    {% endfor %}
+{% endblock %}
